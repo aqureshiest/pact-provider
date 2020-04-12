@@ -27,7 +27,7 @@ public class ProviderContractVerificationTest {
 
     @State("test user exists")
     public void createTestUser() {
-		controller.people().add(new Person(0, "test", "user", 30, null));
+		controller.getPeople().add(new Person(0, "test", "user", 30, null));
     }
 
     @Autowired

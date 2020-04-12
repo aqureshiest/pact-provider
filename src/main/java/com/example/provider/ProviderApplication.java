@@ -14,13 +14,3 @@ public class ProviderApplication {
     }
 }
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-class Person {
-    int id;
-    String first;
-    String last;
-    int age;
-    String[] likes;
-}

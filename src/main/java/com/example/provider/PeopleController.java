@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RestController
@@ -14,13 +15,16 @@ public class PeopleController {
     private final List<Person> people = new ArrayList<>();
 
     @RequestMapping("/people")
-    public List<Person> people() {
-        return people;
+    public List<PersonView> people() {
+        return people.stream().map(PersonView::new).collect(Collectors.toList());
     }
 
     @RequestMapping("/people/{id}")
-    public Person person(@PathVariable("id") int id) {
-        return people.stream().filter(p -> p.getId() == id).findFirst().get();
+    public PersonView person(@PathVariable("id") int id) {
+        return people.stream()
+                .filter(p -> p.getId() == id)
+                .map(PersonView::new)
+                .findFirst().get();
     }
 
     public PeopleController() {

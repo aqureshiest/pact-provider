@@ -38,9 +38,9 @@ class PeopleController {
 
     public PeopleController() {
         Stream.of(
-                new Person(1, "Tom Sam", 18, new String[]{"movies", "hiking"}),
-                new Person(2, "Yom Jam", 22, new String[]{"reading"}),
-                new Person(3, "Nom Ham", 36, new String[]{"sleeping", "walking"})
+                new Person(1, "Tom", "Sam", 18, new String[]{"movies", "hiking"}),
+                new Person(2, "Yom", "Jam", 22, new String[]{"reading"}),
+                new Person(3, "Nom", "Ham", 36, new String[]{"sleeping", "walking"})
         ).forEach(people::add);
     }
 }
@@ -50,7 +50,8 @@ class PeopleController {
 @NoArgsConstructor
 class Person {
     int id;
-    String name;
+    String first;
+    String last;
     int age;
     String[] likes;
 }

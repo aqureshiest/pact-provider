@@ -24,6 +24,7 @@ public class PeopleControllerTest {
     @Test
     public void all_people() {
         String response = restTemplate.getForObject("http://localhost:" + port + "/people", String.class);
+        System.out.println(response);
         Assertions.assertThat(response).isNotEmpty();
     }
 }

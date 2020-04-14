@@ -20,14 +20,13 @@ public class ProviderContractVerificationTest {
     @TestTarget
     public final Target target = new SpringBootHttpTarget();
 
-
-    @State("has people")
+    @State("provider has people loaded in db")
     public void contextLoads() {
     }
 
     @State("test user exists")
     public void createTestUser() {
-		controller.people().add(new Person(0, "test", "user", 30, null));
+		controller.getPeople().add(new Person(0, "test", "user", 30, null));
     }
 
     @Autowired

@@ -21,7 +21,7 @@ public class ProviderContractVerificationTest {
     @TestTarget
     public final Target target = new SpringBootHttpTarget();
 
-    @State("has people")
+    @State("provider has people loaded in db")
     public void contextLoads() {
     }
 

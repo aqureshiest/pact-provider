@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>provider</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.5</version>
     <name>provider</name>
     <description>Demo project for Spring Boot</description>
 
@@ -63,6 +63,9 @@
 <!--                    <pactBrokerUrl>http://localhost</pactBrokerUrl>-->
 <!--					<pact.verifier.publishResults>true</pact.verifier.publishResults>-->
 <!--                </configuration>-->
+
+<!--            ./mvnw -Dpact.verifier.publishResults=true -Dpact.provider.version=0.0.5 test
+-->
 <!--            </plugin>-->
         </plugins>
     </build>

@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 @Provider("provider")
 @PactFolder("../consumer/target/pacts")
+
 @RunWith(SpringRestPactRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ProviderContractVerificationTest {
@@ -20,8 +21,9 @@ public class ProviderContractVerificationTest {
 	public final Target target = new SpringBootHttpTarget();
 
 
-	@State("has people")
+	@State("provider has people loaded in db")
 	public void contextLoads() {
+		// load necessary data in database
 	}
 
 }

@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @Provider("provider")
-@PactBroker(host = "localhost")
+@PactBroker(host = "localhost", tags = "master")
 @RunWith(SpringRestPactRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ProviderContractVerificationTest {
